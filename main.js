@@ -100,7 +100,7 @@
       return `
       <div class="flip flip--link">
         <a class="flip__face flip__front" href="${esc(item.open)}" target="_blank" rel="noopener">
-          <span class="flip__visual">${visual}<span class="flip__hint" aria-hidden="true">${esc(t("open.hint"))} ↗</span></span>
+          <span class="flip__visual">${visual}${isBook && item.badge ? `<span class="flip__badge flip__badge--corner">${esc(tr(item.badge))}</span>` : ""}<span class="flip__hint" aria-hidden="true">${esc(t("open.hint"))} ↗</span></span>
           ${caption}
         </a>
       </div>`;
@@ -112,7 +112,7 @@
         <div class="flip__inner">
           <button type="button" class="flip__face flip__front" aria-expanded="false" aria-controls="${backId}"
                   aria-label="${esc(title)} — ${esc(t("flip.hint"))}">
-            <span class="flip__visual">${visual}<span class="flip__hint" aria-hidden="true">${esc(t("flip.hint"))} ↻</span></span>
+            <span class="flip__visual">${visual}${isBook && item.badge ? `<span class="flip__badge flip__badge--corner">${esc(tr(item.badge))}</span>` : ""}<span class="flip__hint" aria-hidden="true">${esc(t("flip.hint"))} ↻</span></span>
             <span class="flip__caption">
               ${item.badge ? `<span class="flip__badge">${esc(tr(item.badge))}</span>` : ""}
               <span class="flip__title" style="display:block">${esc(title)}</span>

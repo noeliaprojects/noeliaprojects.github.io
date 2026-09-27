@@ -213,9 +213,9 @@ window.PORTFOLIO = {
       year: "",
       image: "",
       summary: {
-        ca: "Una app de minijocs que estic fent ara mateix.",
-        es: "Una app de minijuegos que estoy haciendo ahora mismo.",
-        en: "A mini-games app I'm working on right now."
+        ca: "Una app de minijocs.",
+        es: "Una app de minijuegos.",
+        en: "A mini-games app."
       },
       links: []
     },
@@ -224,6 +224,34 @@ window.PORTFOLIO = {
        Portadas: guarda cada portada en assets/covers/ con el nombre indicado
        (p. ej. assets/covers/pol-pig.jpg). Si no está, se intenta cargar la de
        Amazon y, si tampoco, se muestra el título. */
+    {
+      section: "books",
+      title: "Mar the Mandrill",
+      badge: { ca: "Aviat", es: "Próximamente", en: "Coming soon" },
+      subtitle: "Dica Fables",
+      year: "",
+      image: "assets/covers/mar-mandrill.jpg",
+      summary: {
+        ca: "Aviat a Amazon.",
+        es: "Próximamente en Amazon.",
+        en: "Coming soon to Amazon."
+      },
+      links: []
+    },
+    {
+      section: "books",
+      title: "Laia the Owl",
+      badge: { ca: "Aviat", es: "Próximamente", en: "Coming soon" },
+      subtitle: "Dica Fables",
+      year: "",
+      image: "assets/covers/laia-owl.jpg",
+      summary: {
+        ca: "Aviat a Amazon.",
+        es: "Próximamente en Amazon.",
+        en: "Coming soon to Amazon."
+      },
+      links: []
+    },
     {
       section: "books",
       title: "Pol the Pig",

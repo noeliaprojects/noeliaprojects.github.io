@@ -369,3 +369,4 @@ a.note:hover { transform: rotate(0deg) translateY(-3px); }
 .polaroid--mini { width: 118px; padding: 6px 6px 16px; }
 .polaroid--mini::before { width: 44px; height: 14px; top: -7px; }
 .polaroid--mini img { aspect-ratio: 1; }
+.flip__badge--corner { position: absolute; top: 12px; left: 12px; margin: 0; box-shadow: var(--shadow); }
