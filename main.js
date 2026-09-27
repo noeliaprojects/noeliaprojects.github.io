@@ -218,7 +218,7 @@
     $("#fav-desc").textContent = tr(f.text);
     $("#fav-desc").hidden = !tr(f.text);
     $("#fav-more").innerHTML = (f.more || []).filter(has).map((src, i) => `
-      <button type="button" class="polaroid polaroid--mini" style="--r:${[3, -2.5, 2][i % 3]}deg" data-cap="${esc(f.name || "")}">
+      <button type="button" class="polaroid polaroid--mini" style="--r:${[3, -2.5, 2, -1.5][i % 4]}deg" data-cap="${esc(f.name || "")}">
         <img src="${esc(src)}" alt="${esc(f.name || "")}" loading="lazy" data-soon="">
       </button>`).join("");
 
@@ -236,6 +236,15 @@
         ${has(x.photo) ? `<img src="${esc(x.photo)}" alt="${esc(tr(x.name))}" loading="lazy" data-soon="${esc(t("corner.photo.soon"))}">`
                        : `<span class="polaroid__soon hand">${esc(t("corner.photo.soon"))}</span>`}
         <span class="hand">${esc(tr(x.name))}</span>
+      </button>`).join("");
+
+    // Llocs on he estat
+    const pl = P.showTravels === false ? [] : (P.places || []).filter((x) => has(x.photo));
+    $("#places").hidden = pl.length === 0;
+    $("#place-grid").innerHTML = pl.map((x, i) => `
+      <button type="button" class="polaroid${(x.more || []).length ? " polaroid--stack" : ""}" style="--r:${[-2, 2.5, -1, 1.5, -2.5, 1][i % 6]}deg" data-cap="${esc(tr(x.place))}" data-more="${esc(JSON.stringify(x.more || []))}">
+        <img src="${esc(x.photo)}" alt="${esc(tr(x.place))}" loading="lazy" data-soon="${esc(t("corner.photo.soon"))}">
+        <span class="hand">${esc(tr(x.place))}</span>
       </button>`).join("");
 
     // El jardí
@@ -319,16 +328,29 @@
     }
   }, true);
 
-  // Ver las fotos del jardín en grande
+  // Ver las fotos en grande (con flechas si hay varias del mismo sitio)
   const lb = document.getElementById("lightbox");
   if (lb) {
+    let set = [], pos = 0;
+    const show = () => {
+      lb.querySelector("img").src = set[pos];
+      lb.querySelectorAll(".lightbox__nav").forEach((b) => { b.hidden = set.length < 2; });
+    };
     document.getElementById("main").addEventListener("click", (e) => {
       const pol = e.target.closest("button.polaroid");
       const img = pol && pol.querySelector("img");
       if (!img) return;
-      lb.querySelector("img").src = img.src;
+      set = [img.src].concat(JSON.parse(pol.dataset.more || "[]"));
+      pos = 0; show();
       lb.querySelector(".lightbox__cap").textContent = pol.dataset.cap || "";
       lb.showModal();
+    });
+    lb.querySelector(".lightbox__nav--prev").addEventListener("click", () => { pos = (pos - 1 + set.length) % set.length; show(); });
+    lb.querySelector(".lightbox__nav--next").addEventListener("click", () => { pos = (pos + 1) % set.length; show(); });
+    lb.addEventListener("keydown", (e) => {
+      if (set.length < 2) return;
+      if (e.key === "ArrowLeft") { pos = (pos - 1 + set.length) % set.length; show(); }
+      if (e.key === "ArrowRight") { pos = (pos + 1) % set.length; show(); }
     });
     lb.addEventListener("click", (e) => { if (e.target === lb) lb.close(); });
   }

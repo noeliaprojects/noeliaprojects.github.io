@@ -76,6 +76,14 @@
       </div>
     </section>
 
+    <!-- Llocs -->
+    <section class="section" id="places" hidden>
+      <div class="wrap">
+        <h2 class="section__title"><span data-i18n="corner.places"></span></h2>
+        <div class="garden" id="place-grid"></div>
+      </div>
+    </section>
+
     <!-- El jardí -->
     <section class="section" id="garden">
       <div class="wrap">
@@ -88,6 +96,8 @@
     <dialog class="lightbox" id="lightbox" aria-label="Foto">
       <form method="dialog"><button class="lightbox__close" aria-label="Tancar">×</button></form>
       <img alt="">
+      <button type="button" class="lightbox__nav lightbox__nav--prev" aria-label="Anterior" hidden>‹</button>
+      <button type="button" class="lightbox__nav lightbox__nav--next" aria-label="Següent" hidden>›</button>
       <p class="hand lightbox__cap"></p>
     </dialog>
 

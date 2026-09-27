@@ -26,12 +26,12 @@ window.PORTFOLIO = {
      --------------------------------------------------------- */
   sections: [
     { id: "web",     title: { ca: "En línia", es: "En línea", en: "Online" }, count: false },
-    { id: "uni",     title: { ca: "Treballs de la universitat", es: "Trabajos de la universidad", en: "University work" }, count: false },
+    { id: "fun",     title: { ca: "Descarregables", es: "Descargables", en: "Downloadable" }, count: false },
     { id: "private", title: { ca: "Apps privades",              es: "Apps privadas",              en: "Private apps" }, count: false,
       note:  { ca: "Per a ús intern: no són públiques.",
                es: "Para uso interno: no son públicas.",
                en: "For internal use: not public." } },
-    { id: "fun",     title: { ca: "Apps per diversió",          es: "Apps por diversión",         en: "Apps for fun" }, count: false },
+    { id: "uni",     title: { ca: "Treballs de la universitat", es: "Trabajos de la universidad", en: "University work" }, count: false },
     { id: "books",   title: { ca: "Els meus llibres",           es: "Mis libros",                 en: "My books" }, count: false }
   ],
 
@@ -330,7 +330,7 @@ window.PORTFOLIO = {
     favorite: {
       name: "Paca",
       photo: "assets/personal/paca-1.jpg",
-      more: ["assets/personal/paca-2.jpg", "assets/personal/paca-3.jpg", "assets/personal/paca-4.jpg"],
+      more: ["assets/personal/paca-2.jpg", "assets/personal/paca-3.jpg", "assets/personal/paca-4.jpg", "assets/personal/paca-5.jpg"],
       text: {        // TODO: una frase tuya sobre él/ella
         ca: "",
         es: "",
@@ -348,7 +348,27 @@ window.PORTFOLIO = {
     // Hobbies: una línea por hobby, con su foto (en assets/personal/)
     // Ejemplo: { name: { ca: "Cuinar", es: "Cocinar", en: "Cooking" }, photo: "assets/personal/hobby-1.jpg" },
     hobbies: [
-      // TODO: pásale a Claude la lista de hobbies y las fotos
+      // añade: { name: { ca: "...", es: "...", en: "..." }, photo: "assets/personal/..." }
+    ],
+
+    // Viatges: amagat de moment. Posa-ho a true per tornar-lo a mostrar.
+    showTravels: false,
+
+    // Viatges: una polaroid per lloc; "place" és el text escrit a la polaroid.
+    // "more" (opcional): més fotos del mateix lloc, es veuen en gran amb fletxes.
+    places: [
+      { place: { ca: "Venècia", es: "Venecia", en: "Venice" }, photo: "assets/personal/viatge-venecia.jpg" },
+      { place: "Roma", photo: "assets/personal/viatge-roma.jpg" },
+      { place: { ca: "Londres", es: "Londres", en: "London" }, photo: "assets/personal/viatge-londres.jpg" },
+      { place: { ca: "Dublín", es: "Dublín", en: "Dublin" }, photo: "assets/personal/viatge-dublin.jpg",
+        more: ["assets/personal/viatge-dublin-2.jpg"] },
+      { place: { ca: "Galícia", es: "Galicia", en: "Galicia" }, photo: "assets/personal/viatge-galicia.jpg" },
+      { place: { ca: "Val d'Aran", es: "Valle de Arán", en: "Val d'Aran" }, photo: "assets/personal/viatge-aran.jpg",
+        more: ["assets/personal/viatge-aran-2.jpg", "assets/personal/viatge-aran-3.jpg"] },
+      { place: "Lisboa", photo: "assets/personal/viatge-lisboa.jpg",
+        more: ["assets/personal/viatge-lisboa-2.jpg"] },
+      { place: "Fuerteventura", photo: "assets/personal/viatge-1.jpg" }
+      // , { place: "Nom del lloc", photo: "assets/personal/viatge-xxx.jpg" }
     ],
 
     // El jardí: una línea por foto (el texto es opcional)
@@ -358,7 +378,9 @@ window.PORTFOLIO = {
       { photo: "assets/personal/flor-3.jpg", caption: { ca: "", es: "", en: "" } },
       { photo: "assets/personal/flor-4.jpg", caption: { ca: "", es: "", en: "" } },
       { photo: "assets/personal/flor-5.jpg", caption: { ca: "", es: "", en: "" } },
-      { photo: "assets/personal/flor-6.jpg", caption: { ca: "", es: "", en: "" } }
+      { photo: "assets/personal/flor-6.jpg", caption: { ca: "", es: "", en: "" } },
+      { photo: "assets/personal/flor-7.jpg", caption: { ca: "", es: "", en: "" } },
+      { photo: "assets/personal/flor-8.jpg", caption: { ca: "", es: "", en: "" } }
     ]
   },
 
@@ -389,7 +411,8 @@ window.PORTFOLIO = {
         badge: { ca: "en curs", es: "en curso", en: "in progress" } },
       { when: "",
         title: { ca: "Màster en Enginyeria Informàtica", es: "Máster en Ingeniería Informática", en: "MSc in Computer Engineering" },
-        text:  { ca: "El tinc en pausa (l'àmbit de l'educació es va creuar pel camí).", es: "Lo tengo en pausa (el ámbito de la educación se cruzó en el camino).", en: "On hold for now (the world of education crossed my path)." } },
+        badge: { ca: "en pausa", es: "en pausa", en: "on hold" },
+        text:  { ca: "L'àmbit de l'educació es va creuar pel camí.", es: "El ámbito de la educación se cruzó en el camino.", en: "The world of education crossed my path." } },
       { when: "",
         title: { ca: "Grau en Enginyeria Electrònica Industrial i Automàtica", es: "Grado en Ingeniería Electrónica Industrial y Automática", en: "BEng in Industrial Electronics and Automation" } }
     ],
@@ -399,6 +422,7 @@ window.PORTFOLIO = {
       { title: { ca: "Professora d'anglès", es: "Profesora de inglés", en: "English teacher" } },
       { title: { ca: "Preparadora d'exàmens oficials de Cambridge", es: "Preparadora de exámenes oficiales de Cambridge", en: "Cambridge exam trainer" } },
       { title: { ca: "Sales Support Manager", es: "Sales Support Manager", en: "Sales Support Manager" } },
+      { title: { ca: "Sales Support Trainee", es: "Sales Support Trainee", en: "Sales Support Trainee" } },
       { title: { ca: "Professora de reforç", es: "Profesora de refuerzo", en: "Tutor" } },
       { title: { ca: "Summer camps", es: "Summer camps", en: "Summer camps" } },
       { title: { ca: "Monitora d'acollida", es: "Monitora de acogida", en: "Before-school care leader" } }

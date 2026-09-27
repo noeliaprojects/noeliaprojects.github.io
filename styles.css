@@ -370,3 +370,14 @@ a.note:hover { transform: rotate(0deg) translateY(-3px); }
 .polaroid--mini::before { width: 44px; height: 14px; top: -7px; }
 .polaroid--mini img { aspect-ratio: 1; }
 .flip__badge--corner { position: absolute; top: 12px; left: 12px; margin: 0; box-shadow: var(--shadow); }
+
+/* Nombre del sitio escrito a mano en la polaroid */
+.polaroid .hand, .lightbox__cap { font-family: var(--hand) !important; font-size: 1.55rem; font-weight: 600; line-height: 1.1; color: var(--ink); }
+
+/* Varias fotos del mismo sitio: polaroids apiladas */
+.polaroid--stack { box-shadow: 5px 5px 0 -1px var(--card), 5px 5px 0 0 var(--line), 10px 10px 0 -1px var(--card), 10px 10px 0 0 var(--line), var(--shadow); }
+.lightbox { position: fixed; }
+.lightbox__nav { position: absolute; top: 45%; width: 42px; height: 42px; border-radius: 50%; border: 0; cursor: pointer;
+  background: var(--card); color: var(--ink); font-size: 1.8rem; line-height: 1; box-shadow: var(--shadow); }
+.lightbox__nav--prev { left: 10px; }
+.lightbox__nav--next { right: 10px; }
