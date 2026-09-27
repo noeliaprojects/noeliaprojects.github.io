@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noelia · Recorregut</title>
+  <meta name="description" content="Ingeniera electrónica y maestra de inglés. Apps, webs, herramientas para el aula y cuentos.">
+  <meta property="og:title" content="Noelia · Projectes">
+  <meta property="og:description" content="Ingeniera electrónica y maestra de inglés. Apps, webs, herramientas para el aula y cuentos.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="journey">
+  <a class="skip" href="#main">Salta al contingut</a>
+
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="index.html">Noelia<span>.</span></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html#projects" data-i18n="nav.projects">Projectes</a>
+        <a href="recorregut.html" aria-current="page" data-i18n="nav.journey">Recorregut</a>
+        <a href="raco.html" data-i18n="nav.corner">El meu racó</a>
+        <a href="#contact" data-i18n="nav.contact">Contacte</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="ca" title="Català">
+          <span class="flag" aria-hidden="true"><svg viewBox="0 0 18 18"><rect width="18" height="18" fill="#FCDD09"/><g fill="#DA121A"><rect y="2" width="18" height="2"/><rect y="6" width="18" height="2"/><rect y="10" width="18" height="2"/><rect y="14" width="18" height="2"/></g></svg></span>CA</button>
+        <button type="button" data-lang="es" title="Español">
+          <span class="flag" aria-hidden="true"><svg viewBox="0 0 18 18"><rect width="18" height="18" fill="#C60B1E"/><rect y="4.5" width="18" height="9" fill="#FFC400"/></svg></span>ES</button>
+        <button type="button" data-lang="en" title="English">
+          <span class="flag" aria-hidden="true"><svg viewBox="0 0 18 18"><rect width="18" height="18" fill="#012169"/><path d="M0 0L18 18M18 0L0 18" stroke="#fff" stroke-width="3.6"/><path d="M0 0L18 18M18 0L0 18" stroke="#C8102E" stroke-width="1.2"/><path d="M9 0V18M0 9H18" stroke="#fff" stroke-width="5"/><path d="M9 0V18M0 9H18" stroke="#C8102E" stroke-width="3"/></svg></span>EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- RECORREGUT -->
+    <section class="section journey-page" id="journey">
+      <div class="wrap">
+        <p class="hand journey-page__kicker" aria-hidden="true">Noelia</p>
+        <h1 class="section__title journey-page__title" data-i18n="journey.title">El recorregut</h1>
+        <p class="section__intro" data-i18n="journey.intro"></p>
+      </div>
+    </section>
+
+    <section class="section" id="j-now">
+      <div class="wrap">
+        <h2 class="section__title" data-i18n="journey.now">Ara, en paral·lel</h2>
+        <div class="parallel" id="parallel"></div>
+      </div>
+    </section>
+
+    <section class="section" id="j-edu">
+      <div class="wrap">
+        <h2 class="section__title" data-i18n="journey.education">Formació</h2>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <section class="section" id="j-more">
+      <div class="wrap jcols">
+        <div id="j-work">
+          <h2 class="section__title" data-i18n="journey.work">Experiència</h2>
+          <ul class="jlist" id="work-list"></ul>
+        </div>
+        <div id="j-courses">
+          <h2 class="section__title" data-i18n="journey.courses">Cursos</h2>
+          <ul class="jlist" id="course-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="j-lang">
+      <div class="wrap">
+        <h2 class="section__title" data-i18n="journey.languages">Idiomes</h2>
+        <div class="langs" id="lang-list"></div>
+        <p class="journey-page__back"><a class="link" href="index.html#projects" data-i18n="journey.back">← Veure els projectes</a></p>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section contact" id="contact">
+      <div class="wrap contact__inner">
+        <h2 class="contact__title" data-i18n="contact.title">¿Hablamos?</h2>
+        <p data-i18n="contact.text"></p>
+        <a class="contact__mail" id="contact-mail" href="#"></a>
+        <ul class="socials" id="socials"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="i18n.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

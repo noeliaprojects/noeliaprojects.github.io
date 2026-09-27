@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Noelia · El meu racó</title>
+  <meta name="description" content="Ingeniera electrónica y maestra de inglés. Apps, webs, herramientas para el aula y cuentos.">
+  <meta property="og:title" content="Noelia · Projectes">
+  <meta property="og:description" content="Ingeniera electrónica y maestra de inglés. Apps, webs, herramientas para el aula y cuentos.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="corner">
+  <a class="skip" href="#main">Salta al contingut</a>
+
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="brand" href="index.html">Noelia<span>.</span></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="index.html#projects" data-i18n="nav.projects">Projectes</a>
+        <a href="recorregut.html" data-i18n="nav.journey">Recorregut</a>
+        <a href="raco.html" aria-current="page" data-i18n="nav.corner">El meu racó</a>
+        <a href="#contact" data-i18n="nav.contact">Contacte</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Idioma / Language">
+        <button type="button" data-lang="ca" title="Català">
+          <span class="flag" aria-hidden="true"><svg viewBox="0 0 18 18"><rect width="18" height="18" fill="#FCDD09"/><g fill="#DA121A"><rect y="2" width="18" height="2"/><rect y="6" width="18" height="2"/><rect y="10" width="18" height="2"/><rect y="14" width="18" height="2"/></g></svg></span>CA</button>
+        <button type="button" data-lang="es" title="Español">
+          <span class="flag" aria-hidden="true"><svg viewBox="0 0 18 18"><rect width="18" height="18" fill="#C60B1E"/><rect y="4.5" width="18" height="9" fill="#FFC400"/></svg></span>ES</button>
+        <button type="button" data-lang="en" title="English">
+          <span class="flag" aria-hidden="true"><svg viewBox="0 0 18 18"><rect width="18" height="18" fill="#012169"/><path d="M0 0L18 18M18 0L0 18" stroke="#fff" stroke-width="3.6"/><path d="M0 0L18 18M18 0L0 18" stroke="#C8102E" stroke-width="1.2"/><path d="M9 0V18M0 9H18" stroke="#fff" stroke-width="5"/><path d="M9 0V18M0 9H18" stroke="#C8102E" stroke-width="3"/></svg></span>EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- EL MEU RACÓ -->
+    <section class="section corner-head">
+      <div class="wrap">
+        <p class="hand journey-page__kicker" aria-hidden="true">Noelia</p>
+        <h1 class="section__title journey-page__title" data-i18n="corner.title">El meu racó</h1>
+        <p class="section__intro" data-i18n="corner.intro"></p>
+      </div>
+    </section>
+
+    <!-- El meu projecte preferit -->
+    <section class="section fav" id="fav">
+      <div class="wrap fav__inner">
+        <figure class="polaroid polaroid--big" id="fav-photo"></figure>
+        <div class="fav__text">
+          <p class="hand fav__kicker" data-i18n="corner.fav"></p>
+          <h2 class="fav__name" id="fav-name"></h2>
+          <p class="fav__desc" id="fav-desc"></p>
+          <div class="fav__more" id="fav-more"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ara mateix -->
+    <section class="section" id="now">
+      <div class="wrap">
+        <h2 class="section__title"><span data-i18n="corner.now"></span></h2>
+        <ul class="nowlist" id="now-list"></ul>
+      </div>
+    </section>
+
+    <!-- Hobbies -->
+    <section class="section" id="hobbies" hidden>
+      <div class="wrap">
+        <h2 class="section__title"><span data-i18n="corner.hobbies"></span></h2>
+        <div class="garden" id="hobby-grid"></div>
+      </div>
+    </section>
+
+    <!-- El jardí -->
+    <section class="section" id="garden">
+      <div class="wrap">
+        <h2 class="section__title"><span data-i18n="corner.garden"></span></h2>
+        <div class="garden" id="garden-grid"></div>
+        <p class="garden__insta" id="insta" hidden><a class="btn btn--ghost" href="#" target="_blank" rel="noopener" data-i18n="corner.insta"></a></p>
+      </div>
+    </section>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Foto">
+      <form method="dialog"><button class="lightbox__close" aria-label="Tancar">×</button></form>
+      <img alt="">
+      <p class="hand lightbox__cap"></p>
+    </dialog>
+
+    <!-- CONTACTO -->
+    <section class="section contact" id="contact">
+      <div class="wrap contact__inner">
+        <h2 class="contact__title" data-i18n="contact.title">¿Hablamos?</h2>
+        <p data-i18n="contact.text"></p>
+        <a class="contact__mail" id="contact-mail" href="#"></a>
+        <ul class="socials" id="socials"></ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="i18n.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
