@@ -1,4 +1,3 @@
-/* Textos fijos de la página (menú, títulos de sección, botones...) */
 window.I18N = {
   ca: {
     "meta.title": "Noelia · Projectes",
@@ -12,7 +11,6 @@ window.I18N = {
     "corner.hobbies": "Els meus hobbies",
     "corner.places": "Viatges",
     "corner.garden": "Petites alegries",
-    "corner.garden.intro": "Les meves flors. Toca una foto per veure-la en gran.",
     "corner.photo.soon": "foto aviat",
     "corner.insta": "Més fotos a Instagram ↗",
     "meta.journey": "Noelia · Recorregut",
@@ -48,7 +46,6 @@ window.I18N = {
     "journey.intro": "De l'enginyeria a l'aula, sense deixar del tot cap de les dues.",
     "contact.title": "En parlem?",
     "contact.text": "Si t'interessa algun projecte, vols col·laborar o simplement comentar alguna cosa, escriu-me.",
-    "footer.made": "Fet a mà amb HTML, CSS i paciència."
   },
   es: {
     "meta.title": "Noelia · Proyectos",
@@ -62,7 +59,6 @@ window.I18N = {
     "corner.hobbies": "Mis hobbies",
     "corner.places": "Viajes",
     "corner.garden": "Pequeñas alegrías",
-    "corner.garden.intro": "Mis flores. Toca una foto para verla en grande.",
     "corner.photo.soon": "foto pronto",
     "corner.insta": "Más fotos en Instagram ↗",
     "meta.journey": "Noelia · Recorrido",
@@ -98,7 +94,6 @@ window.I18N = {
     "journey.intro": "De la ingeniería al aula, sin dejar ninguna de las dos del todo.",
     "contact.title": "¿Hablamos?",
     "contact.text": "Si te interesa algún proyecto, quieres colaborar o simplemente comentar algo, escríbeme.",
-    "footer.made": "Hecho a mano con HTML, CSS y paciencia."
   },
   en: {
     "meta.title": "Noelia · Projects",
@@ -112,7 +107,6 @@ window.I18N = {
     "corner.hobbies": "My hobbies",
     "corner.places": "Travels",
     "corner.garden": "Little joys",
-    "corner.garden.intro": "My flowers. Tap a photo to see it bigger.",
     "corner.photo.soon": "photo soon",
     "corner.insta": "More photos on Instagram ↗",
     "meta.journey": "Noelia · Journey",
@@ -148,6 +142,5 @@ window.I18N = {
     "journey.intro": "From engineering to the classroom, without fully leaving either.",
     "contact.title": "Let's talk",
     "contact.text": "If a project caught your eye, you'd like to collaborate, or you just want to say something, drop me a line.",
-    "footer.made": "Handmade with HTML, CSS and patience."
   }
 };

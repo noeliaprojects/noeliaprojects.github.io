@@ -1,4 +1,3 @@
-/* Lógica de la página: no hace falta tocar nada aquí para añadir contenido. */
 (function () {
   const D = window.PORTFOLIO;
   const T = window.I18N;
@@ -6,7 +5,6 @@
 
   let lang = pickLang();
 
-  // ---------- utilidades ----------
   function pickLang() {
     try {
       const saved = localStorage.getItem("lang");
@@ -35,13 +33,14 @@
     const p = D.person;
     if ($("#person-name")) $("#person-name").textContent = p.name;
 
-
     // El correo se muestra con espacios y el enlace solo se crea al hacer clic (anti-spam)
     const [user, domain] = [].concat(p.email);
     const mail = $("#contact-mail");
+    if (mail) {
     mail.href = "#contact";
     mail.textContent = user + " @ " + domain;
     mail.onclick = (e) => { e.preventDefault(); window.location.href = "mailto:" + user + String.fromCharCode(64) + domain; };
+    }
     if ($("#hero-mail")) $("#hero-mail").href = "#contact";
 
     const cv = $("#hero-cv");
@@ -58,7 +57,7 @@
       ["GitHub", p.github],
       ["LinkedIn", p.linkedin]
     ].filter(([, url]) => has(url));
-    $("#socials").innerHTML = socials
+    if ($("#socials")) $("#socials").innerHTML = socials
       .map(([name, url]) => `<li><a class="btn btn--ghost" href="${esc(url)}" target="_blank" rel="noopener">${name}</a></li>`)
       .join("");
   }
@@ -163,6 +162,7 @@
   }
 
   // ---------- recorrido ----------
+  /*
   function renderJourney() {
     const J = D.journey;
     if (!J || !$("#timeline")) return;
@@ -199,8 +199,7 @@
     show("#j-lang", J.languages);
     $("#lang-list").innerHTML = (J.languages || []).map((l) => `
       <div class="lang-card reveal"><div class="lang-card__name">${esc(tr(l.name))}</div><div class="lang-card__level">${[].concat(l.level).map((x) => esc(tr(x))).join("<br>")}</div></div>`).join("");
-  }
-
+  }  */
 
 
   // ---------- el meu racó ----------
@@ -275,7 +274,7 @@
   function renderAll() {
     renderStatic();
     renderShelves();
-    renderJourney();
+    /* renderJourney(); */
     renderCorner();
     observeReveals();
   }

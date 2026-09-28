@@ -1,23 +1,20 @@
-/* =========================================================
-   Colores y tipografías — cámbialos aquí y cambia toda la web
-   ========================================================= */
 :root {
   --paper: #ffffff;
-  --paper-2: #fdf0f4;                 /* rosa muy clarito */
-  --hero-bg: #fdebf1;                 /* fondo rosa de la presentación */
+  --paper-2: #fdf0f4;
+  --hero-bg: #fdebf1;
   --card: #ffffff;
   --ink: #2e2428;
   --muted: #76676d;
   --line: #f3dbe4;
-  --rule: rgba(233, 150, 180, .16);   /* líneas de cuaderno */
-  --margin: rgba(233, 120, 160, .40); /* margen del cuaderno */
-  --accent: #b8466f;                  /* rosa fuerte (textos y botones) */
-  --accent-soft: #fce4ee;             /* rosa pastel */
-  --green: #4f8a7a;                   /* menta */
+  --rule: rgba(233, 150, 180, .16);
+  --margin: rgba(233, 120, 160, .40);
+  --accent: #b8466f;
+  --accent-soft: #fce4ee;
+  --green: #4f8a7a;
   --green-soft: #dff1ea;
-  --blue: #7c62b0;                    /* lila */
+  --blue: #7c62b0;
   --blue-soft: #ece4f7;
-  --amber: #c0605a;                   /* coral */
+  --amber: #c0605a;
   --amber-soft: #fde6e1;
   --shadow: 0 1px 0 rgba(184, 70, 111, .06), 0 10px 26px -14px rgba(184, 70, 111, .28);
 
@@ -54,7 +51,6 @@
   }
 }
 
-/* ========================================================= */
 *, *::before, *::after { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 76px; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
@@ -84,7 +80,6 @@ p { margin: 0; }
 
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
 
-/* ---------- Barra superior ---------- */
 .topbar {
   position: sticky; top: 0; z-index: 20;
   background: color-mix(in srgb, var(--paper) 88%, transparent);
@@ -115,7 +110,6 @@ p { margin: 0; }
   .nav { order: 3; width: 100%; margin-left: 0; gap: 18px; overflow-x: auto; white-space: nowrap; font-size: .9rem; padding-bottom: 2px; }
 }
 
-/* ---------- Presentación ---------- */
 .hero {
   position: relative;
   padding: 72px 0 64px;
@@ -123,7 +117,7 @@ p { margin: 0; }
   background-image: repeating-linear-gradient(to bottom, transparent 0 31px, rgba(214, 110, 150, .16) 31px 32px);
   border-bottom: 1px solid var(--line);
 }
-.hero::before { /* margen rojo del cuaderno */
+.hero::before {
   content: ""; position: absolute; top: 0; bottom: 0; left: max(16px, calc(50% - var(--wrap)/2 + 8px));
   width: 1px; background: var(--margin);
 }
@@ -148,7 +142,6 @@ p { margin: 0; }
   transform: rotate(2deg); border: 1px solid var(--line); max-width: 240px; justify-self: center; }
 .hero__photo img { aspect-ratio: 11/13; object-fit: cover; }
 
-/* ---------- Botones y enlaces ---------- */
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 10px 18px; border-radius: 999px; border: 1.5px solid var(--ink);
@@ -162,14 +155,12 @@ p { margin: 0; }
 
 .link { color: var(--accent); text-decoration: underline; text-decoration-thickness: 1.5px; text-underline-offset: 3px; font-weight: 500; }
 
-/* ---------- Secciones ---------- */
 .section { padding: 80px 0; }
 .section + .section { border-top: 1px dashed var(--line); }
 .section__title { font-size: clamp(1.7rem, 3.5vw, 2.3rem); display: flex; align-items: baseline; gap: 14px; }
 .num { font-family: var(--hand); color: var(--accent); font-size: 1.1em; font-weight: 500; }
 .section__intro { color: var(--muted); max-width: 40em; margin-top: 12px; }
 
-/* ---------- Apartados (estanterías) ---------- */
 .shelf { margin-top: 48px; }
 .shelf__head { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 6px; }
 .shelf__title { font-size: 1.35rem; }
@@ -184,7 +175,6 @@ p { margin: 0; }
 .shelf--fun     { --cat: var(--accent); }
 .shelf--books   { --cat: var(--amber); }
 
-/* ---------- Tarjetas que se giran ---------- */
 .flip { perspective: 1100px; aspect-ratio: 3 / 4; }
 .shelf--books .flip { aspect-ratio: 2 / 3; }
 .flip__inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d;
@@ -195,7 +185,6 @@ p { margin: 0; }
   display: flex; flex-direction: column; box-shadow: var(--shadow); }
 .flip__back { transform: rotateY(180deg); padding: 18px; gap: 10px; }
 
-/* Cara delantera: todo es un botón */
 .flip__front { padding: 0; font: inherit; color: inherit; text-align: left; cursor: pointer; }
 .flip__front:hover { border-color: color-mix(in srgb, var(--cat) 45%, var(--line)); }
 .flip__visual { flex: 1; min-height: 0; display: grid; place-items: center; position: relative;
@@ -213,18 +202,15 @@ p { margin: 0; }
 .flip__front:hover .flip__hint, .flip__front:focus-visible .flip__hint { opacity: 1; }
 @media (hover: none) { .flip__hint { opacity: .85; } }
 
-/* Tarjetas de enlace directo */
 .flip--link .flip__front { text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
 .flip--link .flip__front:hover { transform: translateY(-4px) rotate(-.6deg); }
 .shelf--web .flip__letter { color: var(--accent); }
 
-/* Portadas de libro: sin pie, a sangre */
 .shelf--books .flip__caption { display: none; }
 .shelf--books .flip__face { border-radius: 4px 10px 10px 4px; }
 .shelf--books .flip__front { box-shadow: inset 7px 0 0 rgba(0,0,0,.09), var(--shadow); }
 .book-fallback { padding: 18px; text-align: center; font-family: var(--serif); font-size: 1.3rem; color: var(--ink); }
 
-/* Cara trasera */
 .flip__back .flip__title { font-size: 1.1rem; }
 .flip__back .year { font-family: var(--hand); color: var(--cat); font-size: 1.2rem; line-height: 1; }
 .flip__back p { color: var(--muted); font-size: .9rem; line-height: 1.5; overflow: auto; }
@@ -240,7 +226,6 @@ p { margin: 0; }
   .flip__inner { transition: none; }
 }
 
-/* ---------- Recorrido ---------- */
 .timeline { list-style: none; margin: 36px 0 0; padding: 0; position: relative; max-width: 760px; }
 .timeline::before { content: ""; position: absolute; left: 9px; top: 6px; bottom: 6px; width: 2px;
   background: repeating-linear-gradient(to bottom, var(--line) 0 6px, transparent 6px 11px); }
@@ -259,7 +244,6 @@ p { margin: 0; }
   border-radius: 999px; border: 1px dashed var(--muted); color: var(--muted); }
 .step .link { display: inline-block; margin-top: 8px; font-size: .95rem; }
 
-/* ---------- Contacto ---------- */
 .contact { background: var(--accent-soft); text-align: center; }
 .contact__inner { max-width: 620px; }
 .contact__title { font-size: clamp(2rem, 5vw, 3rem); font-weight: 400; margin-bottom: 14px; }
@@ -268,17 +252,14 @@ p { margin: 0; }
   color: var(--ink); text-decoration: none; border-bottom: 2px solid var(--accent); padding-bottom: 2px; word-break: break-all; }
 .socials { list-style: none; padding: 0; margin: 26px 0 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
 
-/* ---------- Pie ---------- */
 .footer { border-top: 1px solid var(--line); padding: 26px 0; font-size: .9rem; color: var(--muted); }
 .footer__inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; align-items: center; }
 .footer .hand { font-size: 1.25rem; }
 
-/* ---------- Aparición suave ---------- */
 .reveal { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.is-in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; transition: none; } }
 
-/* ---------- Página del recorregut ---------- */
 .journey-page { padding-top: 64px;
   background-image: repeating-linear-gradient(to bottom, transparent 0 31px, var(--rule) 31px 32px); }
 .journey-page__kicker { transform: rotate(-2deg); display: inline-block; margin-bottom: 4px; }
@@ -286,7 +267,6 @@ p { margin: 0; }
 .journey-page__back { margin-top: 48px; }
 .nav a[aria-current="page"] { color: var(--accent); }
 
-/* ---------- El meu racó ---------- */
 .corner-head { padding-top: 64px; padding-bottom: 32px; background-color: var(--hero-bg);
   background-image: repeating-linear-gradient(to bottom, transparent 0 31px, rgba(214, 110, 150, .16) 31px 32px); }
 
@@ -338,7 +318,6 @@ p { margin: 0; }
 .flip__visual { overflow: hidden; }
 .flip__visual > img:not(.is-icon):not(.is-logo) { position: absolute; inset: 0; }
 
-/* ---------- Recorregut: bloques ---------- */
 .journey-page { padding-bottom: 40px; }
 .parallel { display: grid; gap: 22px; margin-top: 30px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
 .note { position: relative; display: block; background: var(--card); border: 1px solid var(--line); border-radius: 4px;
@@ -371,10 +350,8 @@ a.note:hover { transform: rotate(0deg) translateY(-3px); }
 .polaroid--mini img { aspect-ratio: 1; }
 .flip__badge--corner { position: absolute; top: 12px; left: 12px; margin: 0; box-shadow: var(--shadow); }
 
-/* Nombre del sitio escrito a mano en la polaroid */
 .polaroid .hand, .lightbox__cap { font-family: var(--hand) !important; font-size: 1.55rem; font-weight: 600; line-height: 1.1; color: var(--ink); }
 
-/* Varias fotos del mismo sitio: polaroids apiladas */
 .polaroid--stack { box-shadow: 5px 5px 0 -1px var(--card), 5px 5px 0 0 var(--line), 10px 10px 0 -1px var(--card), 10px 10px 0 0 var(--line), var(--shadow); }
 .lightbox { position: fixed; }
 .lightbox__nav { position: absolute; top: 45%; width: 42px; height: 42px; border-radius: 50%; border: 0; cursor: pointer;

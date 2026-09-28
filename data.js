@@ -1,29 +1,16 @@
-/* =========================================================
-   TUS DATOS — el único archivo que necesitas tocar.
-
-   - Cada texto va en los tres idiomas: { ca: "...", es: "...", en: "..." }
-   - Si un enlace, imagen o año está vacío (""), no se muestra.
-   - Busca "TODO" (Ctrl+F) para ver lo que falta.
-   ========================================================= */
-
 window.PORTFOLIO = {
   person: {
     name: "Noelia",
-    // El correo va partido en dos para que los robots de spam no lo encuentren
+
     email: ["noelia.projects", "gmail.com"],
     github: "https://github.com/noeliaprojects",
-    linkedin: "", // opcional
+    linkedin: "",
     amazon: "https://www.amazon.es/stores/Noelia-D%C3%ADaz-Cabello/author/B0GC24WSTF",
     googlePlay: "https://play.google.com/store/apps/developer?id=noelia.projects",
-    photo: "",    // opcional: "assets/foto.jpg"
-    cv: ""        // opcional: "assets/cv.pdf"
+    photo: "",
+    cv: ""
   },
 
-  /* ---------------------------------------------------------
-     APARTADOS de "Els meus projectes" (en este orden).
-     Para crear uno nuevo, añade { id, title } y usa ese id
-     en los proyectos. count: false = no mostrar cuántos hay.
-     --------------------------------------------------------- */
   sections: [
     { id: "web",     title: { ca: "En línia", es: "En línea", en: "Online" }, count: false },
     { id: "fun",     title: { ca: "Descarregables", es: "Descargables", en: "Downloadable" }, count: false },
@@ -35,26 +22,8 @@ window.PORTFOLIO = {
     { id: "books",   title: { ca: "Els meus llibres",           es: "Mis libros",                 en: "My books" }, count: false }
   ],
 
-  /* ---------------------------------------------------------
-     TARJETAS (se giran al tocarlas)
-     section: id del apartado
-     image:   icono, captura o portada (ruta en assets/ o URL)
-     links:   [{ type: "download" | "view" | "read" | "buy" | "code", url: "" }]
-     open:    si la pones, la tarjeta no se gira y abre ese enlace directamente
-     Capturas de las webs: guárdalas en assets/shots/ (ver LEEME.txt de esa carpeta)
-     --------------------------------------------------------- */
   items: [
-    /* ---- Webs i apps en línia ----
-       Estas tarjetas NO se giran: al tocarlas abren la web directamente.
-       Para añadir una, copia este bloque y pon la dirección en "open":
-       {
-         section: "web",
-         title: "Nombre de la web",
-         subtitle: { ca: "Web", es: "Web", en: "Web" },
-         image: "assets/captura-web.png",   // opcional (mejor 4:3)
-         open: "https://noeliaprojects.github.io/nombre-repo/"
-       },
-       TODO: añadir aquí cada web/app publicada de tu GitHub */
+
     {
       section: "web",
       title: "FCE Speaking Practice",
@@ -97,7 +66,6 @@ window.PORTFOLIO = {
       open: "https://github.com/noeliaprojects?tab=repositories"
     },
 
-    /* ---- Treballs de la universitat ---- */
     {
       section: "uni",
       title: "Reconocimiento facial en una plataforma portable",
@@ -129,7 +97,6 @@ window.PORTFOLIO = {
       links: []
     },
 
-    /* ---- Apps privades ---- */
     {
       section: "private",
       title: { ca: "Eines per a l'escola", es: "Herramientas para la escuela", en: "School tools" },
@@ -171,7 +138,6 @@ window.PORTFOLIO = {
       links: []
     },
 
-    /* ---- Apps per diversió ---- */
     {
       section: "fun",
       title: "Diccionari d'insults catalans",
@@ -220,10 +186,6 @@ window.PORTFOLIO = {
       links: []
     },
 
-    /* ---- Els meus llibres ----
-       Portadas: guarda cada portada en assets/covers/ con el nombre indicado
-       (p. ej. assets/covers/pol-pig.jpg). Si no está, se intenta cargar la de
-       Amazon y, si tampoco, se muestra el título. */
     {
       section: "books",
       title: "Mar the Mandrill",
@@ -319,43 +281,32 @@ window.PORTFOLIO = {
     }
   ],
 
-  /* ---------------------------------------------------------
-     EL MEU RACÓ (página personal: raco.html)
-     Fotos: guárdalas en assets/personal/ (ver LEEME.txt de esa carpeta).
-     Lo que esté vacío no se muestra.
-     --------------------------------------------------------- */
   personal: {
-    instagram: "",   // de momento no; si algún día sí: "https://www.instagram.com/usuario/"
+    instagram: "",
 
     favorite: {
       name: "Paca",
       photo: "assets/personal/paca-1.jpg",
       more: ["assets/personal/paca-2.jpg", "assets/personal/paca-3.jpg", "assets/personal/paca-4.jpg", "assets/personal/paca-5.jpg"],
-      text: {        // TODO: una frase tuya sobre él/ella
+      text: {
         ca: "",
         es: "",
         en: ""
       }
     },
 
-    // "Ara mateix": qué estás leyendo, escuchando, aprendiendo...
     now: [
-      { label: { ca: "Llegint",   es: "Leyendo",     en: "Reading" },   value: { ca: "", es: "", en: "" } }, // TODO
-      { label: { ca: "Escoltant", es: "Escuchando",  en: "Listening to" }, value: { ca: "", es: "", en: "" } }, // TODO
-      { label: { ca: "Aprenent",  es: "Aprendiendo", en: "Learning" },  value: { ca: "", es: "", en: "" } }  // TODO
+      { label: { ca: "Llegint",   es: "Leyendo",     en: "Reading" },   value: { ca: "", es: "", en: "" } },
+      { label: { ca: "Escoltant", es: "Escuchando",  en: "Listening to" }, value: { ca: "", es: "", en: "" } },
+      { label: { ca: "Aprenent",  es: "Aprendiendo", en: "Learning" },  value: { ca: "", es: "", en: "" } }
     ],
 
-    // Hobbies: una línea por hobby, con su foto (en assets/personal/)
-    // Ejemplo: { name: { ca: "Cuinar", es: "Cocinar", en: "Cooking" }, photo: "assets/personal/hobby-1.jpg" },
     hobbies: [
-      // añade: { name: { ca: "...", es: "...", en: "..." }, photo: "assets/personal/..." }
+
     ],
 
-    // Viatges: amagat de moment. Posa-ho a true per tornar-lo a mostrar.
     showTravels: false,
 
-    // Viatges: una polaroid per lloc; "place" és el text escrit a la polaroid.
-    // "more" (opcional): més fotos del mateix lloc, es veuen en gran amb fletxes.
     places: [
       { place: { ca: "Venècia", es: "Venecia", en: "Venice" }, photo: "assets/personal/viatge-venecia.jpg" },
       { place: "Roma", photo: "assets/personal/viatge-roma.jpg" },
@@ -368,10 +319,9 @@ window.PORTFOLIO = {
       { place: "Lisboa", photo: "assets/personal/viatge-lisboa.jpg",
         more: ["assets/personal/viatge-lisboa-2.jpg"] },
       { place: "Fuerteventura", photo: "assets/personal/viatge-1.jpg" }
-      // , { place: "Nom del lloc", photo: "assets/personal/viatge-xxx.jpg" }
+
     ],
 
-    // El jardí: una línea por foto (el texto es opcional)
     garden: [
       { photo: "assets/personal/flor-1.jpg", caption: { ca: "", es: "", en: "" } },
       { photo: "assets/personal/flor-2.jpg", caption: { ca: "", es: "", en: "" } },
@@ -384,13 +334,9 @@ window.PORTFOLIO = {
     ]
   },
 
-  /* ---------------------------------------------------------
-     RECORREGUT (página recorregut.html)
-     Cada bloque es una lista. Lo que dejes vacío no se muestra.
-     --------------------------------------------------------- */
+/*
   journey: {
 
-    // "Ara, en paral·lel": lo que haces a la vez ahora mismo
     now: [
       { title: { ca: "Professora d'anglès", es: "Profesora de inglés", en: "English teacher" },
         text:  { ca: "Classes a totes les edats.", es: "Clases a todas las edades.", en: "Classes for all ages." } },
@@ -404,9 +350,8 @@ window.PORTFOLIO = {
         link:  "index.html#projects" }
     ],
 
-    // Formació: de más nueva a más antigua
     education: [
-      { when: "",     // TODO: años
+      { when: "",
         title: { ca: "Grau en Educació Primària", es: "Grado en Educación Primaria", en: "BEd in Primary Education" },
         badge: { ca: "en curs", es: "en curso", en: "in progress" } },
       { when: "",
@@ -417,7 +362,6 @@ window.PORTFOLIO = {
         title: { ca: "Grau en Enginyeria Electrònica Industrial i Automàtica", es: "Grado en Ingeniería Electrónica Industrial y Automática", en: "BEng in Industrial Electronics and Automation" } }
     ],
 
-    // Experiència
     work: [
       { title: { ca: "Professora d'anglès", es: "Profesora de inglés", en: "English teacher" } },
       { title: { ca: "Preparadora d'exàmens oficials de Cambridge", es: "Preparadora de exámenes oficiales de Cambridge", en: "Cambridge exam trainer" } },
@@ -428,7 +372,6 @@ window.PORTFOLIO = {
       { title: { ca: "Monitora d'acollida", es: "Monitora de acogida", en: "Before-school care leader" } }
     ],
 
-    // Idiomes
     languages: [
       { name: { ca: "Català",   es: "Catalán",  en: "Catalan" },  level: { ca: "Nativa", es: "Nativa", en: "Native" } },
       { name: { ca: "Castellà", es: "Castellano", en: "Spanish" }, level: { ca: "Nativa", es: "Nativa", en: "Native" } },
@@ -438,7 +381,6 @@ window.PORTFOLIO = {
       { name: { ca: "Japonès",  es: "Japonés",  en: "Japanese" }, level: { ca: "Començant", es: "Empezando", en: "Just starting" } }
     ],
 
-    // Cursos
     courses: [
       { ca: "Intel·ligència emocional i direcció d'equips", es: "Inteligencia emocional y dirección de equipos", en: "Emotional intelligence and team leadership" },
       { ca: "ACTIC nivell mitjà", es: "ACTIC nivel medio", en: "ACTIC digital skills certificate (intermediate)" },
@@ -447,4 +389,5 @@ window.PORTFOLIO = {
       { ca: "Soldadura per elèctrode revestit (xapes i perfils)", es: "Soldadura por electrodo revestido (chapas y perfiles)", en: "Shielded metal arc welding (plates and sections)" }
     ]
   }
+*/
 };
