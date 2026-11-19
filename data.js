@@ -59,6 +59,31 @@ window.PORTFOLIO = {
     },
     {
       section: "web",
+      title: "Speaking Corner",
+      subtitle: { ca: "Activitats d'speaking per a classe", es: "Actividades de speaking para clase", en: "Speaking activities for class" },
+      glyph: "SC",
+      open: "https://noeliaprojects.github.io/speaking_corner/"
+    },
+    {
+      section: "web",
+      title: "UOEprep",
+      subtitle: { ca: "Use of English per al Linguaskill", es: "Use of English para el Linguaskill", en: "Use of English for Linguaskill" },
+      glyph: "UoE",
+      image: "assets/icons/uoeprep.png",
+      fit: "logo",
+      open: "https://noeliaprojects.github.io/uoeprep/"
+    },
+    {
+      section: "web",
+      title: "Mentalia",
+      subtitle: { ca: "Recursos per a sessions de psicologia", es: "Recursos para sesiones de psicología", en: "Resources for therapy sessions" },
+      glyph: "M",
+      image: "assets/icons/mentalia.png",
+      fit: "logo",
+      open: "https://noeliaprojects.github.io/mentalia/"
+    },
+    {
+      section: "web",
       title: { ca: "El meu GitHub", es: "Mi GitHub", en: "My GitHub" },
       subtitle: { ca: "Tots els repositoris", es: "Todos los repositorios", en: "All repositories" },
       image: "assets/icons/github-avatar.svg",
