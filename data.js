@@ -84,6 +84,14 @@ window.PORTFOLIO = {
     },
     {
       section: "web",
+      title: { ca: "Calendari d'Advent", es: "Calendario de Adviento", en: "Advent Calendar" },
+      subtitle: { ca: "Un jersei de Nadal cada dia", es: "Un jersey de Navidad cada día", en: "A Christmas sweater every day" },
+      glyph: "25",
+      image: "assets/icons/advent.svg",
+      open: "https://noeliaprojects.github.io/xmas-sweater-advent-calendar/"
+    },
+    {
+      section: "web",
       title: { ca: "El meu GitHub", es: "Mi GitHub", en: "My GitHub" },
       subtitle: { ca: "Tots els repositoris", es: "Todos los repositorios", en: "All repositories" },
       image: "assets/icons/github-avatar.svg",
